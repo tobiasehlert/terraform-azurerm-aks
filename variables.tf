@@ -898,10 +898,10 @@ variable "msi_auth_for_monitoring_enabled" {
 }
 
 variable "nat_gateway_profile" {
-  type = optional(object({
+  type = object({
     idle_timeout_in_minutes   = optional(number)
     managed_outbound_ip_count = optional(number)
-  }))
+  })
   default     = null
   description = <<-EOT
  `nat_gateway_profile` block supports the following:
