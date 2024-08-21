@@ -972,7 +972,7 @@ variable "network_plugin_mode" {
   description = "(Optional) Specifies the network plugin mode used for building the Kubernetes network. Possible value is `overlay`. Changing this forces a new resource to be created."
 }
 
-variable "network_pod_cidrs" {
+variable "net_profile_pod_cidrs" {
   type        = list(string)
   default     = null
   description = "(Optional) A list of CIDRs to use for pod IP addresses. For single-stack networking a single IPv4 CIDR is expected. For dual-stack networking an IPv4 and IPv6 CIDR are expected. Changing this forces a new resource to be created."
@@ -984,7 +984,7 @@ variable "network_policy" {
   description = " (Optional) Sets up network policy to be used with Azure CNI. Network policy allows us to control the traffic flow between pods. Currently supported values are calico and azure. Changing this forces a new resource to be created."
 }
 
-variable "network_service_cidrs" {
+variable "net_profile_service_cidrs" {
   type        = list(string)
   default     = null
   description = "(Optional) A list of CIDRs to use for Kubernetes services. For single-stack networking a single IPv4 CIDR is expected. For dual-stack networking an IPv4 and IPv6 CIDR are expected. Changing this forces a new resource to be created."
